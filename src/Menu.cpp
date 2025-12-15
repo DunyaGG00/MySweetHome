@@ -66,7 +66,8 @@ void Menu::displayMainMenu() const {
     std::cout << "      (N)ormal, (E)vening, (P)arty, (C)inema" << std::endl;
     std::cout << std::endl;
     
-    std::cout << "  [7] [Disabled] Change State (Feature removed)" << std::endl;
+    std::cout << "  [7] Change State" << std::endl;
+    std::cout << "      (N)ormal, (H)igh Performance, (L)ow Power, (S)leep, (P)revious" << std::endl;
     std::cout << std::endl;
     
     std::cout << "  [8] Manual (Display user manual)" << std::endl;
@@ -118,6 +119,15 @@ void Menu::displayManual() const {
     std::cout << "     - Cinema: Lights OFF, TV ON, Music OFF" << std::endl;
     std::cout << std::endl;
     
+    std::cout << "  7. CHANGE STATE" << std::endl;
+    std::cout << "     Switch between system states:" << std::endl;
+    std::cout << "     - Normal: Standard operation" << std::endl;
+    std::cout << "     - High Performance: Maximum responsiveness" << std::endl;
+    std::cout << "     - Low Power: Energy saving mode" << std::endl;
+    std::cout << "     - Sleep: Minimal operation" << std::endl;
+    std::cout << "     - Previous: Restore previous state from history" << std::endl;
+    std::cout << std::endl;
+    
     printLine('=');
 }
 
@@ -147,6 +157,7 @@ void Menu::displayAbout() const {
     std::cout << "  [Developer 1] - Device Module" << std::endl;
     std::cout << "  [Developer 2] - Factory Module" << std::endl;
     std::cout << "  [Developer 3] - Mode Manager Module" << std::endl;
+    std::cout << "  [Developer 4] - State Manager Module" << std::endl;
     std::cout << std::endl;
     
     printLine('-');
@@ -156,8 +167,10 @@ void Menu::displayAbout() const {
     std::cout << "  - Factory Method (SimpleDeviceFactory)" << std::endl;
     std::cout << "  - Abstract Factory (DeviceFactory, DetectorFactory)" << std::endl;
     std::cout << "  - Prototype (Device cloning)" << std::endl;
-    std::cout << "  - State (Mode states)" << std::endl;
+    std::cout << "  - State (Mode states, System states)" << std::endl;
+    std::cout << "  - Memento (State history)" << std::endl;
     std::cout << "  - Observer (Device failure notifications)" << std::endl;
+    std::cout << "  - Strategy (Notification strategies)" << std::endl;
     std::cout << "  - Template Method (Device power on/off)" << std::endl;
     std::cout << "  - Facade (HomeController)" << std::endl;
     std::cout << std::endl;
@@ -241,6 +254,22 @@ void Menu::displayModeSubmenu() const {
     std::cout << "  (E) Evening Mode - Light OFF, TV OFF, Music OFF" << std::endl;
     std::cout << "  (P) Party Mode - Light ON, TV OFF, Music ON" << std::endl;
     std::cout << "  (C) Cinema Mode - Light OFF, TV ON, Music OFF" << std::endl;
+    std::cout << "  (Q) Cancel" << std::endl;
+    std::cout << std::endl;
+    std::cout << "  Enter choice: ";
+}
+
+void Menu::displayStateSubmenu() const {
+    std::cout << std::endl;
+    printLine('-');
+    std::cout << "  CHANGE STATE SUBMENU" << std::endl;
+    printLine('-');
+    std::cout << "  Select state:" << std::endl;
+    std::cout << "  (N) Normal - Standard operation" << std::endl;
+    std::cout << "  (H) High Performance - Maximum performance" << std::endl;
+    std::cout << "  (L) Low Power - Energy saving" << std::endl;
+    std::cout << "  (S) Sleep - Minimal operation" << std::endl;
+    std::cout << "  (P) Previous - Restore previous state" << std::endl;
     std::cout << "  (Q) Cancel" << std::endl;
     std::cout << std::endl;
     std::cout << "  Enter choice: ";

@@ -43,6 +43,7 @@ public:
     void displayPowerOnSubmenu() const;
     void displayPowerOffSubmenu() const;
     void displayModeSubmenu() const;
+    void displayStateSubmenu() const;
     
     int getMenuChoice() const;
     char getCharChoice() const;
