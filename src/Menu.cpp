@@ -157,6 +157,7 @@ void Menu::displayAbout() const {
     std::cout << "  - Abstract Factory (DeviceFactory, DetectorFactory)" << std::endl;
     std::cout << "  - Prototype (Device cloning)" << std::endl;
     std::cout << "  - State (Mode states)" << std::endl;
+    std::cout << "  - Observer (Device failure notifications)" << std::endl;
     std::cout << "  - Template Method (Device power on/off)" << std::endl;
     std::cout << "  - Facade (HomeController)" << std::endl;
     std::cout << std::endl;

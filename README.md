@@ -16,6 +16,9 @@ My Sweet Home (MSH) is a smart home management system that controls IoT devices 
 | **Abstract Factory** | `DeviceFactory`, `DetectorFactory` | Creates device families |
 | **Prototype** | `Device::clone()` | Clone devices with configuration |
 | **State** | `ModeState`, `SystemState` | Mode and system states |
+| **Memento** | `HomeMemento`, `StateManager` | State history and undo |
+| **Observer** | `IDeviceObserver`, `NotificationSystem` | Device failure notifications |
+| **Strategy** | `NotificationStrategy` | Different notification methods |
 | **Template Method** | `Device::powerOn()`, `Device::powerOff()` | Device operations |
 | **Facade** | `HomeController` | Simplified system interface |
 
@@ -163,6 +166,7 @@ Device (Abstract Base)
 | REQ6 | Power on/off | `Device::powerOn()`, `Device::powerOff()` |
 | REQ7 | Modes | `ModeManager`, `ModeState` classes |
 | REQ8 | Add/remove devices | `HomeController` device management |
+| REQ9 | Failure notifications | `NotificationSystem`, `IDeviceObserver` |
 | REQ10 | Configuration copy | `Device::copyConfigurationFrom()`, Prototype pattern |
 | REQ11 | State history | `StateManager`, `HomeMemento` (Memento pattern) |
 | REQ12 | State restore | `StateManager::restorePreviousState()` |
