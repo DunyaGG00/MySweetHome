@@ -1,15 +1,3 @@
-/**
- * @file SmokeDetector.cpp
- * @brief Implementation of Smoke Detector
- * @version 5.0
- * @date 03/12/2025
- * 
- * @authors
- * - 220208041: Detectors & Alarm - Smoke Detector implementation
- * 
- * @patterns Factory Method (Product)
- */
-
 #include "SmokeDetector.h"
 #include <sstream>
 

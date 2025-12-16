@@ -1,15 +1,3 @@
-/**
- * @file GasDetector.cpp
- * @brief Implementation of Gas Detector
- * @version 5.0
- * @date 03/12/2025
- * 
- * @authors
- * - 220208041: Detectors & Alarm - Gas Detector implementation
- * 
- * @patterns Factory Method (Product)
- */
-
 #include "GasDetector.h"
 #include <sstream>
 
