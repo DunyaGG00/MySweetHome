@@ -6,27 +6,35 @@
  *
  * @authors
  * - 220201047: Security System - Chain of Responsibility Manager
-
+ *
  * @patterns Chain of Responsibility, Facade (Subsystem)
  */
 
 #include "SecuritySystem.h"
 #include "AlarmHandler.h"
+#include "LightHandler.h"
+#include "PoliceHandler.h"
 #include <iostream>
 
 SecuritySystem::SecuritySystem(Alarm *alarm, std::vector<Light *> *lights)
     : alarm(alarm), lights(lights), isActive(false)
 {
 
-    // Build the Chain of Responsibility: Alarm Only (Reduced chain)
+    // Build the Chain of Responsibility: Alarm -> Light -> Police
     alarmHandler = new AlarmHandler(alarm);
+    lightHandler = new LightHandler(lights);
+    policeHandler = new PoliceHandler();
 
-    // Chain ends here for V3.5
+    // Set the chain
+    alarmHandler->setNext(lightHandler);
+    lightHandler->setNext(policeHandler);
 }
 
 SecuritySystem::~SecuritySystem()
 {
     delete alarmHandler;
+    delete lightHandler;
+    delete policeHandler;
 }
 
 void SecuritySystem::activate()
@@ -56,5 +64,5 @@ void SecuritySystem::displayStatus() const
 {
     std::cout << "--- SECURITY SYSTEM ---" << std::endl;
     std::cout << "  Status: " << (isActive ? "ARMED" : "DISARMED") << std::endl;
-    std::cout << "  Chain: Alarm Only" << std::endl;
+    std::cout << "  Chain: Alarm -> Lights -> Police" << std::endl;
 }

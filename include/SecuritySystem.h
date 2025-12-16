@@ -6,6 +6,7 @@
  *
  * @authors
  * - 220201047: Security System - Chain of Responsibility Manager
+ *
  * @patterns Chain of Responsibility, Facade (Subsystem)
  */
 
@@ -19,6 +20,8 @@
 // Forward declarations for handlers
 class SecurityHandler;
 class AlarmHandler;
+class LightHandler;
+class PoliceHandler;
 
 class SecuritySystem
 {
@@ -28,6 +31,8 @@ private:
 
     // Chain handlers
     AlarmHandler *alarmHandler;
+    LightHandler *lightHandler;
+    PoliceHandler *policeHandler;
 
     bool isActive;
 
