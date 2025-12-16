@@ -73,36 +73,20 @@ MySweetHome/
 
 ---
 
-## Compilation and Running
+## Compilation
 
-### Prerequisites
-- CMake (version 3.10 or higher)
-- C++ Compiler (supporting C++98/11)
-- Git
-
-### Build Instructions
-
-1. **Create a build directory:**
-   ```bash
-   mkdir build
-   ```
-
-2. **Configure the project:**
-   ```bash
-   cmake -B build
-   ```
-
-3. **Build the executable:**
-   ```bash
-   cmake --build build
-   ```
-
-### Running the Application
-
-After a successful build, the executable will be located in the `bin` directory inside your build folder.
-
+### Using CMake:
 ```bash
-./build/bin/msh
+mkdir build && cd build
+cmake ..
+make
+./bin/msh
+```
+
+### Using g++ directly:
+```bash
+g++ -std=c++98 -I include -o msh src/*.cpp
+./msh
 ```
 
 ---
@@ -157,8 +141,17 @@ Device (Abstract Base)
 
 ## Security System Sequence
 When motion is detected (and security is active):
-1. **Alarm** triggers immediately
-*(Note: Advanced handlers like Police call and Light flashing have been simplified in this version)*
+1. **Alarm** triggers (3 seconds)
+2. **Lights** turn on (2 seconds)
+3. **Police** called
+
+---
+
+## Detection System Sequence
+When smoke/gas is detected:
+1. **Alarm** triggers (3 seconds) - *can be interrupted by user*
+2. **Lights** blink on/off (5 times) - *can be interrupted by user*
+3. **Fire Station** called
 
 ---
 
