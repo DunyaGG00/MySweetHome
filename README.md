@@ -263,13 +263,15 @@ MY SWEET HOME (MSH)
 ---
 
 ## Team Members
-- **Integrator**: [Name] - Integration & Build System
-- **Developer 1**: [Name] - Device Module
-- **Developer 2**: [Name] - Factory Module
-- **Developer 3**: [Name] - Mode Manager Module
-- **Developer 4**: [Name] - State Manager Module
-- **Developer 5**: [Name] - Security System Module
-- **Developer 6**: [Name] - Detection System Module
+- **Integrator**: Anıl Akpınar - Integration & Build System
+- **Developer 1**: Ömer Faruk Çakmak - Device Core & Factories
+- **Developer 2**: Mehmet Efe Ergin - Actuators & Prototype
+- **Developer 3**: Zeynep Bilge Tuğ - Detectors & Alarm
+- **Developer 4**: Hüseyin Saçıkay - Storage & Menu
+- **Developer 5**: Yusuf Berk Baytok - Mode System
+- **Developer 6**: Yunis Ibrahimov - State History
+- **Developer 7**: Burak Yıldırım - Security System
+- **Developer 8**: Dünyamalı Goyushlu - Detection System
 
 ---
 
