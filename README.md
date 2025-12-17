@@ -120,6 +120,43 @@ ctest --output-on-failure
 
 ---
 
+## Web Interface & Live Demo
+
+A modern, web-based interface is available to interact with the C++ system in real-time.
+
+### Features
+*   **Live Terminal:** Interact with the `msh` C++ application via a web browser.
+*   **Multi-User Support:** Each user gets an isolated session with their own process and filesystem workspace.
+*   **Auto-Cleanup:** Sessions are automatically destroyed after 5 minutes of inactivity or upon disconnection.
+*   **Responsive UI:** Dark/Light mode support, adjustable font sizes, and mobile-friendly layout.
+*   **Secure:** Input validation and process isolation.
+
+### Running via Docker (Recommended)
+The easiest way to run the web interface is using the provided Dockerfile.
+
+```bash
+# Build the image
+docker build -t msh-smart-home .
+
+# Run the container (Access at http://localhost:3000)
+docker run -p 3000:3000 -it msh-smart-home
+```
+
+### Running Locally (Requires Node.js)
+```bash
+# Navigate to web directory
+cd web
+
+# Install dependencies
+npm install
+
+# Start the server
+node server.js
+```
+Then open `http://localhost:3000` in your browser.
+
+---
+
 ## Device Classes Hierarchy
 
 ```
